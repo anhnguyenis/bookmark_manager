@@ -10,10 +10,7 @@
 
 feature 'View bookmarks' do
   scenario 'returns the list of bookmarks' do
-  #setup_table
-  Bookmark.add(url: "http://www.makersacademy.com") #replaces web_helper named setup_table
-  Bookmark.add(url: "http://www.bbc.co.uk")
-  Bookmark.add(url: "http://www.google.com")
+  setup_table
   visit ('/bookmarks')
   expect(page).to have_content "http://google.com"
   expect(page).to have_content "www.bbc.co.uk"

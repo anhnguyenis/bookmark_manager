@@ -3,10 +3,7 @@ require 'features/web_helper'
 
 describe Bookmark do
   before (:each) do
-    # setup_table
-    Bookmark.add(url: "http://www.makersacademy.com") #replaces web_helper named setup_table
-    Bookmark.add(url: "http://www.bbc.co.uk")
-    Bookmark.add(url: "http://www.google.com")
+    setup_table
   end
   describe '.all' do
     it 'returns all bookmarks' do
