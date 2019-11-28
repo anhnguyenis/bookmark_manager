@@ -6,6 +6,6 @@ feature 'Add bookmarks' do
     fill_in "url", with: "www.myspace.com"
     click_button("Submit")
     visit ('/bookmarks')
-    expect(page).to have_content "www.myspace.com"
+    expect(Bookmark.all).to have_content "www.myspace.com"
   end
 end

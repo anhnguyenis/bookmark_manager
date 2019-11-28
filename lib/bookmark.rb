@@ -20,7 +20,7 @@ class Bookmark
 
   def self.add(url)
     if ENV['RACK_ENV'] == 'test'
-      connection = PG.connect(dbname: 'bookmark_manager_test')
+    connection = PG.connect(dbname: 'bookmark_manager_test')
     else
     connection = PG.connect(dbname: 'bookmark_manager')
     end
